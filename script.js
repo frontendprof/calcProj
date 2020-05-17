@@ -32,4 +32,17 @@ function reverseNumberFormat(num) {
 
 let operator = document.getElementsByClassName("operator");
 
-console.log(operator);
+for (let i = 0; i < operator.length; i++) {
+    operator[i].addEventListener("click", function () {
+        alert("THe operator of " + this.id + "\n clicked")
+    })
+}
+
+
+let number = document.getElementsByClassName("number");
+
+for (let i = 0; i < number.length; i++) {
+    number[i].addEventListener("click", function () {
+        alert("THe number of " + this.id + "\n clicked")
+    })
+}
