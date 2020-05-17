@@ -1,0 +1,33 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(238, 112, 112);
+    
+}
+
+#container{
+    width: 80%;
+    height: 90vh;
+    background: url("abstract.jpg") center/cover fixed no-repeat;
+   margin: 20px auto;
+   
+}
+
+#calculator{
+    width: 320px;
+    height: 520px;
+    background-color: #eaedef;
+    margin:0 auto;
+    top:20px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow:0 4px 8px 0 rgba(240, 236, 3, 0.2), 0 6px 20px 0 rgba(255, 239, 8, 0.19)
+}
+
+#result{
+    height: 120px;
+}
