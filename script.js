@@ -41,6 +41,17 @@ for (let i = 0; i < operator.length; i++) {
         output = output.substr(0, output.length - 1);
         printOutput(output);
       }
+    } else {
+      let output = getOutput();
+      let history = getHistory();
+      if (output != "") {
+        output = reverseNumberFormat(output);
+        history = history + output;
+        if (this.id == "=") {
+          let result = eval(history);
+          printOutput(result);
+        }
+      }
     }
   });
 }
