@@ -28,6 +28,23 @@ function reverseNumberFormat(num) {
   return Number(num.replace(/,/g, ""));
 }
 
+let operator = document.getElementsByClassName("operator");
+
+for (let i = 0; i < operator.length; i++) {
+  operator[i].addEventListener("click", function () {
+    if (this.id == "clear") {
+      printHistory("");
+      printOutput("");
+    } else if (this.id == "backspace") {
+      let output = reverseNumberFormat(getOutput()).toString();
+      if (output) {
+        output = output.substr(0, output.length - 1);
+        printOutput(output);
+      }
+    }
+  });
+}
+
 let number = document.getElementsByClassName("number");
 
 for (let i = 0; i < number.length; i++) {
